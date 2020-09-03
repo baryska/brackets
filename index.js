@@ -1,7 +1,7 @@
 'use strict'
 
 const bracketsMatch = (brackets) => {
-//pokud je string prázdný nebo je v poli lichý počet závorek:
+//pokud je string prázdný nebo je ve stringu lichý počet závorek (předpokládáme-li, že string nebude obsahovat žádné mezery; pokud bychom tuto jistotu neměli, museli bychom druhou podmínku smazat, protože by mohla vyhodit falešně false výsledek):
   if (brackets.length === 0 || brackets.length % 2 != 0)
     return false
 
@@ -42,5 +42,3 @@ console.log(bracketsMatch('())')) //false
 console.log(bracketsMatch(`((
   )())
   ())((())`)) //false (ze zadání)
-
-
